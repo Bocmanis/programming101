@@ -26,8 +26,31 @@ static void Declarations(string[] args)
     int a;
     int b = 2, c = 3;
     a = 1;
+    bool doILikeTurtles = true;
+    string name = "Donuld Tramp";
+    List<string> listOfNames = new List<string>()
+    {
+        "Ivinkin Trampin",
+        "Jane Doe",
+        "John Smith",
+    };
+    string nothingHereYet = string.Empty;
+    nothingHereYet = string.Join(listOfNames, ";");
+    var newClass = new OopClass()
+    {
+        Name = "testingStuff",
+        Id = 233,
+        IsThisSad = false,
+    };
     Console.WriteLine(a + b + c);
 }
+public class OopClass
+{
+    public string Name {get;set;}
+    public int Id {get;set;}
+    public bool IsThisSad {get;set;}
+}
+
 ```
 If statement
 ```c#
