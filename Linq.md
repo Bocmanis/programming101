@@ -1,3 +1,4 @@
+https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.aggregate?view=netframework-4.8
 ## .Where()
 ```c#
 List<string> fruits = new List<string> { "apple", "passionfruit", "banana", "mango", 
@@ -81,7 +82,7 @@ Console.WriteLine("The largest number is {0}.", max);
  The largest number is 1.5E+104.
 */
 ```
-##Any() & All()
+## Any() & All()
 ```c#
 class Pet
 {
@@ -127,4 +128,30 @@ public static void AnyEx2()
        Philips
     */
 }
+```
+## Select()
+
+```c#
+string[] fruits = { "apple", "banana", "mango", "orange", 
+                      "passionfruit", "grape" };
+
+var query =
+    fruits.Select((fruit, index) =>
+                      new { index, str = fruit.Substring(0, index) });
+
+foreach (var obj in query)
+{
+    Console.WriteLine("{0}", obj);
+}
+
+/*
+ This code produces the following output:
+
+ {index=0, str=}
+ {index=1, str=b}
+ {index=2, str=ma}
+ {index=3, str=ora}
+ {index=4, str=pass}
+ {index=5, str=grape}
+*/
 ```
