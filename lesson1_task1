@@ -1,0 +1,43 @@
+```c#
+using System;
+using System.Linq;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            var summa = 0;
+
+            string numbers = "23;3421;-1223;2344;-23233;1222;aa;-2334";
+
+            var numbersList = numbers.Split(";");
+
+            foreach (var number in numbersList)
+            {
+                //int.TryParse(number, out int parsednumber);
+
+                if (int.TryParse(number, out int parsednumber))
+                {
+                    summa = parsednumber + summa;
+                }
+
+                else
+                {
+                    Console.WriteLine($"could not parse {number}");
+                }
+            }
+
+            //var parsedNumbers = numbersList.Select(elements => int.Parse(elements));
+
+       
+
+            Console.WriteLine(summa);
+
+
+        }
+    }
+}
+```
